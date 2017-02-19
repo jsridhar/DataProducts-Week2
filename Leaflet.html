@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -128,8 +129,21 @@ $(document).ready(function () {
 </div>
 
 
-<div id="htmlwidget-00193f30139ec3b07ca4" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-00193f30139ec3b07ca4">{"x":{"setView":[[37.8,-96],4,[]],"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]},{"method":"addProviderTiles","args":["OpenTopoMap",null,null,{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]}]},"evals":[],"jsHooks":[]}</script>
+<div id="create-a-web-page-using-r-markdown-that-features-a-map-created-with-leaflet." class="section level4">
+<h4>Create a web page using R Markdown that features a map created with Leaflet.</h4>
+<p>Host your webpage on either GitHub Pages, RPubs, or NeoCities.</p>
+<p>Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity! Review criterialess</p>
+</div>
+<div id="the-rubric-contains-the-following-two-questions" class="section level4">
+<h4>The rubric contains the following two questions:</h4>
+<p>Does the web page feature a date and is this date less than two months before the date that you’re grading this assignment? Does the web page feature an interactive map that appears to have been created with Leaflet?</p>
+<pre class="r"><code>m &lt;- leaflet() %&gt;% setView(lng = -96, lat = 37.8, zoom = 4) %&gt;% 
+  addTiles() %&gt;%
+  addProviderTiles(&quot;OpenTopoMap&quot;)
+m</code></pre>
+<div id="htmlwidget-48f77222fcb3fbd6924f" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-48f77222fcb3fbd6924f">{"x":{"setView":[[37.8,-96],4,[]],"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap\u003c/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA\u003c/a>"}]},{"method":"addProviderTiles","args":["OpenTopoMap",null,null,{"errorTileUrl":"","noWrap":false,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false}]}]},"evals":[],"jsHooks":[]}</script>
+</div>
 
 
 
