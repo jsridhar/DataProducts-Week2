@@ -1,0 +1,17 @@
+---
+title: "USA Topography"
+output: html_document
+date: '`r format(Sys.time(), "%d %B, %Y")`'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+```{r echo=FALSE}
+m <- leaflet() %>% setView(lng = -96, lat = 37.8, zoom = 4) %>% 
+  addTiles() %>%
+  addProviderTiles("OpenTopoMap")
+m
+```
